@@ -1,0 +1,37 @@
+##������ ��������� �����
+#AddDefaultCharset UTF-8
+
+## ��������� �� �������������� �������� ��� ���(��������)
+## Options +SymLinksIfOwnerMatch
+#Options +FollowSymLinks
+
+## ������ ������ �������� ������� ��������
+#Options -Indexes
+
+## �� ��������� �����
+#DirectoryIndex index.php
+
+## �������� ��������� ��������������
+#RewriteEngine on
+#RewriteCond $1 !^(index\.php|images|robots\.txt|assets|sitemap\.xml)
+#RewriteCond %{REQUEST_URI} !\.(css�js�jpg�gif)$
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ /index.php?$1 [L,QSA]
+
+
+#RewriteEngine on
+#RewriteCond $1 !^(index\.php|images|js|css|robots\.txt|favicon\.ico)
+#RewriteRule ^(.*)$ index.php/main/index/$1 [L]
+
+
+Options +FollowSymLinks
+Options -Indexes
+DirectoryIndex index.php
+RewriteEngine on
+RewriteCond $1 !^(index\.php|images|robots\.txt)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?/$1 [L,QSA]
+
+

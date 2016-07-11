@@ -1,0 +1,20 @@
+User-Agent: YandexDirect
+Disallow:
+
+User-agent: Googlebot
+Disallow: /findpost/
+Disallow: /newpost/
+Disallow: /lastpost/
+Disallow: /members/
+Disallow: /*st/0/
+Disallow: /*A-Z
+Disallow: /*Z-A
+Disallow: /print/
+Disallow: /st/
+Disallow: /?
+Disallow: /index.php
+Disallow: /ypxl.php
+
+User-agent: *
+
+Host: http://topgame.byethost5.com/
